@@ -19,6 +19,7 @@ import { useRouter } from "next/navigation";
 // import { showError, showSuccess } from "@/utils/styles/toast-utils";
 // import { useAuthStore } from "../../../store/authStore";
 import { useEffect, useState } from "react";
+import PrimaryButton from "../customs/PrimaryButton";
 
 const SingInBlock = () => {
   const router = useRouter();
@@ -117,9 +118,7 @@ const SingInBlock = () => {
               </FormItem>
             )}
           />
-          <Button type="submit" className="cursor-pointer">
-            Đăng nhập
-          </Button>
+          <PrimaryButton content="Sign in" type="submit" />
         </form>
       </Form>
     </div>

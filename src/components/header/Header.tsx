@@ -1,5 +1,12 @@
 "use client";
-import { Bell, ChartBarBig, Search, ShoppingCart, User } from "lucide-react";
+import {
+  Bell,
+  ChartBarBig,
+  NotebookPen,
+  Search,
+  ShoppingCart,
+  User,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Input } from "../ui/input";
@@ -18,6 +25,7 @@ import {
 } from "../ui/hover-card";
 import PrimaryButton from "../customs/PrimaryButton";
 import TransparentButton from "../customs/TransparentButton";
+
 import {
   Dialog,
   DialogContent,
@@ -27,6 +35,7 @@ import {
   DialogTrigger,
 } from "../ui/dialog";
 import AuthBlock from "../auth/AuthBlock";
+import { Badge } from "../ui/badge";
 
 const Header = () => {
   const [language, setLanguage] = useState<{
@@ -63,7 +72,7 @@ const Header = () => {
     <header className="w-full bg-white">
       <div className="mx-auto max-w-[1230px] h-[68px] flex items-center justify-between">
         <Link href={"/"}>
-          <Image src="/logo.png" alt="logo" width={220} height={40} />
+          <Image src="/logo.png" alt="logo" width={220} height={40} priority />
         </Link>
 
         <div className="w-[calc(100%_-_700px)] flex border border-[#ccc] rounded-[10px] items-center">
@@ -80,14 +89,413 @@ const Header = () => {
         </div>
 
         <div className="flex justify-between w-[340px]">
-          <div className="text-[12px] flex flex-col cursor-pointer items-center leading-relaxed text-[var(--text)]">
-            <Bell color="#646464" className="mb-1 " />
-            Notification
-          </div>
+          <HoverCard openDelay={100} closeDelay={100}>
+            <HoverCardTrigger>
+              <div className="text-[12px]  cursor-pointer leading-relaxed text-[var(--text)] relative">
+                <div className="flex flex-col  items-center">
+                  <Bell color="#646464" className="mb-1 " />
+                  Notification
+                </div>
+                <Badge
+                  className="h-4 min-w-4 rounded-full px-1 font-mono tabular-nums absolute top-[-5px] right-[5px]"
+                  variant="destructive"
+                >
+                  99
+                </Badge>
+              </div>
+            </HoverCardTrigger>
+            <HoverCardContent align="end" className="w-[360px]">
+              <div className="flex text-[16px] justify-between">
+                <div className="text-[#0D0E0F] flex items-center font-bold">
+                  <Bell size={16} className="mr-2 font-bold" />
+                  <span>{"Thông báo (27)"}</span>
+                </div>
+                <Link href={"/"} className="text-[#2489F4] font-bold">
+                  Xem tất cả
+                </Link>
+              </div>
+              <div className="w-full h-[1px] bg-[#ddd] my-4"></div>
+
+              <div className=" w-full  max-h-[calc(100vh-200px)]  overflow-y-auto">
+                <Link
+                  href={"/"}
+                  className="flex w-full gap-1 min-w-0  cursor-pointer py-4"
+                >
+                  <div className="">
+                    <NotebookPen />
+                  </div>
+                  <div className="text-[14px] text-[var(--text)] w-[280px] min-w-0">
+                    {/* 👇 Tiêu đề cắt 1 dòng */}
+                    <p className="font-bold truncate">
+                      Nâng trình ngoại ngữ cùng Lorem, ipsum dolor sit amet
+                      consectetur adipisicing elit. Vero, doloremque tempore qui
+                      quam eius enim sint id aliquam, vitae saepe quasi maiores!
+                    </p>
+
+                    {/* 👇 Nội dung cắt 2 dòng */}
+                    <p className="line-clamp-2 text-justify w-full">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Accusamus perferendis a assumenda autem facere veritatis
+                      nesciunt, asperiores ratione earum optio vel. Consequuntur
+                      deserunt quo voluptas facilis modi corrupti officia
+                      explicabo?
+                    </p>
+                  </div>
+                </Link>
+
+                <Link
+                  href={"/"}
+                  className="flex w-full gap-1 min-w-0  cursor-pointer py-4"
+                >
+                  <div className="">
+                    <NotebookPen />
+                  </div>
+                  <div className="text-[14px] text-[var(--text)] w-[280px] min-w-0">
+                    {/* 👇 Tiêu đề cắt 1 dòng */}
+                    <p className="font-bold truncate">
+                      Nâng trình ngoại ngữ cùng Lorem, ipsum dolor sit amet
+                      consectetur adipisicing elit. Vero, doloremque tempore qui
+                      quam eius enim sint id aliquam, vitae saepe quasi maiores!
+                    </p>
+
+                    {/* 👇 Nội dung cắt 2 dòng */}
+                    <p className="line-clamp-2 text-justify w-full">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Accusamus perferendis a assumenda autem facere veritatis
+                      nesciunt, asperiores ratione earum optio vel. Consequuntur
+                      deserunt quo voluptas facilis modi corrupti officia
+                      explicabo?
+                    </p>
+                  </div>
+                </Link>
+
+                <Link
+                  href={"/"}
+                  className="flex w-full gap-1 min-w-0  cursor-pointer py-4"
+                >
+                  <div className="">
+                    <NotebookPen />
+                  </div>
+                  <div className="text-[14px] text-[var(--text)] w-[280px] min-w-0">
+                    {/* 👇 Tiêu đề cắt 1 dòng */}
+                    <p className="font-bold truncate">
+                      Nâng trình ngoại ngữ cùng Lorem, ipsum dolor sit amet
+                      consectetur adipisicing elit. Vero, doloremque tempore qui
+                      quam eius enim sint id aliquam, vitae saepe quasi maiores!
+                    </p>
+
+                    {/* 👇 Nội dung cắt 2 dòng */}
+                    <p className="line-clamp-2 text-justify w-full">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Accusamus perferendis a assumenda autem facere veritatis
+                      nesciunt, asperiores ratione earum optio vel. Consequuntur
+                      deserunt quo voluptas facilis modi corrupti officia
+                      explicabo?
+                    </p>
+                  </div>
+                </Link>
+
+                <Link
+                  href={"/"}
+                  className="flex w-full gap-1 min-w-0  cursor-pointer py-4"
+                >
+                  <div className="">
+                    <NotebookPen />
+                  </div>
+                  <div className="text-[14px] text-[var(--text)] w-[280px] min-w-0">
+                    {/* 👇 Tiêu đề cắt 1 dòng */}
+                    <p className="font-bold truncate">
+                      Nâng trình ngoại ngữ cùng Lorem, ipsum dolor sit amet
+                      consectetur adipisicing elit. Vero, doloremque tempore qui
+                      quam eius enim sint id aliquam, vitae saepe quasi maiores!
+                    </p>
+
+                    {/* 👇 Nội dung cắt 2 dòng */}
+                    <p className="line-clamp-2 text-justify w-full">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Accusamus perferendis a assumenda autem facere veritatis
+                      nesciunt, asperiores ratione earum optio vel. Consequuntur
+                      deserunt quo voluptas facilis modi corrupti officia
+                      explicabo?
+                    </p>
+                  </div>
+                </Link>
+
+                <Link
+                  href={"/"}
+                  className="flex w-full gap-1 min-w-0  cursor-pointer py-4"
+                >
+                  <div className="">
+                    <NotebookPen />
+                  </div>
+                  <div className="text-[14px] text-[var(--text)] w-[280px] min-w-0">
+                    {/* 👇 Tiêu đề cắt 1 dòng */}
+                    <p className="font-bold truncate">
+                      Nâng trình ngoại ngữ cùng Lorem, ipsum dolor sit amet
+                      consectetur adipisicing elit. Vero, doloremque tempore qui
+                      quam eius enim sint id aliquam, vitae saepe quasi maiores!
+                    </p>
+
+                    {/* 👇 Nội dung cắt 2 dòng */}
+                    <p className="line-clamp-2 text-justify w-full">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Accusamus perferendis a assumenda autem facere veritatis
+                      nesciunt, asperiores ratione earum optio vel. Consequuntur
+                      deserunt quo voluptas facilis modi corrupti officia
+                      explicabo?
+                    </p>
+                  </div>
+                </Link>
+
+                <Link
+                  href={"/"}
+                  className="flex w-full gap-1 min-w-0  cursor-pointer py-4"
+                >
+                  <div className="">
+                    <NotebookPen />
+                  </div>
+                  <div className="text-[14px] text-[var(--text)] w-[280px] min-w-0">
+                    {/* 👇 Tiêu đề cắt 1 dòng */}
+                    <p className="font-bold truncate">
+                      Nâng trình ngoại ngữ cùng Lorem, ipsum dolor sit amet
+                      consectetur adipisicing elit. Vero, doloremque tempore qui
+                      quam eius enim sint id aliquam, vitae saepe quasi maiores!
+                    </p>
+
+                    {/* 👇 Nội dung cắt 2 dòng */}
+                    <p className="line-clamp-2 text-justify w-full">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Accusamus perferendis a assumenda autem facere veritatis
+                      nesciunt, asperiores ratione earum optio vel. Consequuntur
+                      deserunt quo voluptas facilis modi corrupti officia
+                      explicabo?
+                    </p>
+                  </div>
+                </Link>
+
+                <Link
+                  href={"/"}
+                  className="flex w-full gap-1 min-w-0  cursor-pointer py-4"
+                >
+                  <div className="">
+                    <NotebookPen />
+                  </div>
+                  <div className="text-[14px] text-[var(--text)] w-[280px] min-w-0">
+                    {/* 👇 Tiêu đề cắt 1 dòng */}
+                    <p className="font-bold truncate">
+                      Nâng trình ngoại ngữ cùng Lorem, ipsum dolor sit amet
+                      consectetur adipisicing elit. Vero, doloremque tempore qui
+                      quam eius enim sint id aliquam, vitae saepe quasi maiores!
+                    </p>
+
+                    {/* 👇 Nội dung cắt 2 dòng */}
+                    <p className="line-clamp-2 text-justify w-full">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Accusamus perferendis a assumenda autem facere veritatis
+                      nesciunt, asperiores ratione earum optio vel. Consequuntur
+                      deserunt quo voluptas facilis modi corrupti officia
+                      explicabo?
+                    </p>
+                  </div>
+                </Link>
+
+                <Link
+                  href={"/"}
+                  className="flex w-full gap-1 min-w-0  cursor-pointer py-4"
+                >
+                  <div className="">
+                    <NotebookPen />
+                  </div>
+                  <div className="text-[14px] text-[var(--text)] w-[280px] min-w-0">
+                    {/* 👇 Tiêu đề cắt 1 dòng */}
+                    <p className="font-bold truncate">
+                      Nâng trình ngoại ngữ cùng Lorem, ipsum dolor sit amet
+                      consectetur adipisicing elit. Vero, doloremque tempore qui
+                      quam eius enim sint id aliquam, vitae saepe quasi maiores!
+                    </p>
+
+                    {/* 👇 Nội dung cắt 2 dòng */}
+                    <p className="line-clamp-2 text-justify w-full">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Accusamus perferendis a assumenda autem facere veritatis
+                      nesciunt, asperiores ratione earum optio vel. Consequuntur
+                      deserunt quo voluptas facilis modi corrupti officia
+                      explicabo?
+                    </p>
+                  </div>
+                </Link>
+
+                <Link
+                  href={"/"}
+                  className="flex w-full gap-1 min-w-0  cursor-pointer py-4"
+                >
+                  <div className="">
+                    <NotebookPen />
+                  </div>
+                  <div className="text-[14px] text-[var(--text)] w-[280px] min-w-0">
+                    {/* 👇 Tiêu đề cắt 1 dòng */}
+                    <p className="font-bold truncate">
+                      Nâng trình ngoại ngữ cùng Lorem, ipsum dolor sit amet
+                      consectetur adipisicing elit. Vero, doloremque tempore qui
+                      quam eius enim sint id aliquam, vitae saepe quasi maiores!
+                    </p>
+
+                    {/* 👇 Nội dung cắt 2 dòng */}
+                    <p className="line-clamp-2 text-justify w-full">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Accusamus perferendis a assumenda autem facere veritatis
+                      nesciunt, asperiores ratione earum optio vel. Consequuntur
+                      deserunt quo voluptas facilis modi corrupti officia
+                      explicabo?
+                    </p>
+                  </div>
+                </Link>
+
+                <Link
+                  href={"/"}
+                  className="flex w-full gap-1 min-w-0  cursor-pointer py-4"
+                >
+                  <div className="">
+                    <NotebookPen />
+                  </div>
+                  <div className="text-[14px] text-[var(--text)] w-[280px] min-w-0">
+                    {/* 👇 Tiêu đề cắt 1 dòng */}
+                    <p className="font-bold truncate">
+                      Nâng trình ngoại ngữ cùng Lorem, ipsum dolor sit amet
+                      consectetur adipisicing elit. Vero, doloremque tempore qui
+                      quam eius enim sint id aliquam, vitae saepe quasi maiores!
+                    </p>
+
+                    {/* 👇 Nội dung cắt 2 dòng */}
+                    <p className="line-clamp-2 text-justify w-full">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Accusamus perferendis a assumenda autem facere veritatis
+                      nesciunt, asperiores ratione earum optio vel. Consequuntur
+                      deserunt quo voluptas facilis modi corrupti officia
+                      explicabo?
+                    </p>
+                  </div>
+                </Link>
+
+                <Link
+                  href={"/"}
+                  className="flex w-full gap-1 min-w-0  cursor-pointer py-4"
+                >
+                  <div className="">
+                    <NotebookPen />
+                  </div>
+                  <div className="text-[14px] text-[var(--text)] w-[280px] min-w-0">
+                    {/* 👇 Tiêu đề cắt 1 dòng */}
+                    <p className="font-bold truncate">
+                      Nâng trình ngoại ngữ cùng Lorem, ipsum dolor sit amet
+                      consectetur adipisicing elit. Vero, doloremque tempore qui
+                      quam eius enim sint id aliquam, vitae saepe quasi maiores!
+                    </p>
+
+                    {/* 👇 Nội dung cắt 2 dòng */}
+                    <p className="line-clamp-2 text-justify w-full">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Accusamus perferendis a assumenda autem facere veritatis
+                      nesciunt, asperiores ratione earum optio vel. Consequuntur
+                      deserunt quo voluptas facilis modi corrupti officia
+                      explicabo?
+                    </p>
+                  </div>
+                </Link>
+
+                <Link
+                  href={"/"}
+                  className="flex w-full gap-1 min-w-0  cursor-pointer py-4"
+                >
+                  <div className="">
+                    <NotebookPen />
+                  </div>
+                  <div className="text-[14px] text-[var(--text)] w-[280px] min-w-0">
+                    {/* 👇 Tiêu đề cắt 1 dòng */}
+                    <p className="font-bold truncate">
+                      Nâng trình ngoại ngữ cùng Lorem, ipsum dolor sit amet
+                      consectetur adipisicing elit. Vero, doloremque tempore qui
+                      quam eius enim sint id aliquam, vitae saepe quasi maiores!
+                    </p>
+
+                    {/* 👇 Nội dung cắt 2 dòng */}
+                    <p className="line-clamp-2 text-justify w-full">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Accusamus perferendis a assumenda autem facere veritatis
+                      nesciunt, asperiores ratione earum optio vel. Consequuntur
+                      deserunt quo voluptas facilis modi corrupti officia
+                      explicabo?
+                    </p>
+                  </div>
+                </Link>
+              </div>
+            </HoverCardContent>
+          </HoverCard>
 
           <div className="text-[12px] flex flex-col cursor-pointer items-center leading-relaxed text-[var(--text)]">
-            <ShoppingCart color="#646464" className="mb-1 " />
-            My Cart
+            <HoverCard openDelay={100} closeDelay={100}>
+              <HoverCardTrigger>
+                <div className="text-[12px]  cursor-pointer leading-relaxed text-[var(--text)] relative">
+                  <div className="flex flex-col  items-center">
+                    <ShoppingCart color="#646464" className="mb-1 " />
+                    My Cart
+                  </div>
+                  <Badge
+                    className="h-4 min-w-4 rounded-full px-1 font-mono tabular-nums absolute top-[-5px] right-[-2px]"
+                    variant="destructive"
+                  >
+                    99
+                  </Badge>
+                </div>
+              </HoverCardTrigger>
+              <HoverCardContent align="end" className="w-[360px]">
+                <div className="flex text-[16px] justify-between">
+                  <div className="text-[#0D0E0F] flex items-center font-bold">
+                    <ShoppingCart size={16} className="mr-2 font-bold" />
+                    <span>{"Giỏ hàng (3)"}</span>
+                  </div>
+                </div>
+                <div className="w-full h-[1px] bg-[#ddd] my-4"></div>
+
+                <div className=" w-full  max-h-[calc(100vh-200px)]  overflow-y-auto">
+                  <Link
+                    href={"/"}
+                    className="flex w-full gap-1 min-w-0  cursor-pointer py-4"
+                  >
+                    <div className="">
+                      <Image
+                        src={
+                          "https://cdn1.fahasa.com/media/catalog/product//8/9/8935235241015.jpg"
+                        }
+                        alt="anh chup"
+                        width={68}
+                        height={68}
+                        style={{ objectFit: "cover" }}
+                      />
+                    </div>
+                    <div className="text-[14px] text-[var(--text)] w-[280px] min-w-0 ml-1">
+                      {/* 👇 Tiêu đề cắt 1 dòng */}
+                      <p className=" truncate">
+                        Nâng trình ngoại ngữ cùng Lorem, ipsum dolor sit amet
+                        consectetur adipisicing elit. Vero, doloremque tempore
+                        qui quam eius enim sint id aliquam, vitae saepe quasi
+                        maiores!
+                      </p>
+
+                      {/* 👇 Nội dung cắt 2 dòng */}
+                      <div className=" text-justify w-full flex">
+                        <p className="mr-2 font-bold">11200</p>
+                        <p>x1</p>
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+
+                <div className="">
+                  <PrimaryButton content="Xem giỏ hàng" />
+                </div>
+              </HoverCardContent>
+            </HoverCard>
           </div>
 
           <DropdownMenu open={hoverOpen} onOpenChange={setHoverOpen}>
@@ -141,6 +549,7 @@ const Header = () => {
                     width={20}
                     height={14}
                     className="rounded-sm"
+                    style={{ objectFit: "contain" }}
                   />
                   <span> {language.label}</span>
                 </Button>
@@ -160,6 +569,7 @@ const Header = () => {
                       width={20}
                       height={14}
                       className="rounded-sm"
+                      style={{ objectFit: "contain" }}
                     />
                     <span> {lang.label}</span>
                   </DropdownMenuItem>
