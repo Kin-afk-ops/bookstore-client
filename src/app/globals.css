@@ -53,7 +53,7 @@
   --card-foreground: oklch(0.129 0.042 264.695);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
+  /* --primary: oklch(0.208 0.042 265.755); */
   --primary-foreground: oklch(0.984 0.003 247.858);
   --secondary: oklch(0.968 0.007 247.896);
   --secondary-foreground: oklch(0.208 0.042 265.755);
@@ -120,5 +120,40 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+.main-container {
+  margin: 40px auto; /* cách top & bottom 40px */
+
+  background: #ffffff;
+  max-width: 1230px;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 10px; /* tuỳ chọn */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* tuỳ chọn */
+}
+
+/* Responsive cho tablet */
+@media (max-width: 1024px) {
+  .main-container {
+    max-width: 900px;
+    margin: 30px auto;
+  }
+}
+
+/* Responsive cho mobile lớn */
+@media (max-width: 768px) {
+  .main-container {
+    max-width: 600px;
+    margin: 20px auto;
+  }
+}
+
+/* Responsive cho mobile nhỏ */
+@media (max-width: 480px) {
+  .main-container {
+    max-width: 95%;
+    margin: 15px auto;
   }
 }

@@ -21,7 +21,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import PrimaryButton from "../customs/PrimaryButton";
 
-const SingInBlock = () => {
+const SignInBlock = () => {
   const router = useRouter();
 
   //   const user = useAuthStore((state) => state.user);
@@ -30,18 +30,16 @@ const SingInBlock = () => {
   const [loading, setLoading] = useState<boolean>(false);
 
   const formSchema = z.object({
-    phone: z
+    email: z
       .string()
-      .nonempty({ message: "Số điện thoại không được để trống." })
-      .regex(/^0\d{9}$/, {
-        message: "Số điện thoại phải bắt đầu bằng số 0 và có đúng 10 chữ số.",
-      }),
+      .nonempty({ message: "Email không được để trống." })
+      .email({ message: "Email không hợp lệ." }),
     password: z.string().nonempty({ message: "Mật khẩu không được để trống." }),
   });
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      phone: "",
+      email: "",
       password: "",
     },
   });
@@ -82,15 +80,15 @@ const SingInBlock = () => {
         >
           <FormField
             control={form.control}
-            name="phone"
+            name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="mb-2 text-[lg]">Phone</FormLabel>
+                <FormLabel className="mb-2 text-[lg]">Email</FormLabel>
                 <FormControl>
                   <Input
-                    placeholder="Enter Phone"
+                    placeholder="Enter email"
                     {...field}
-                    autoComplete="current-phone"
+                    autoComplete="current-email"
                   />
                 </FormControl>
 
@@ -113,7 +111,6 @@ const SingInBlock = () => {
                     autoComplete="current-password"
                   />
                 </FormControl>
-
                 <FormMessage />
               </FormItem>
             )}
@@ -125,4 +122,4 @@ const SingInBlock = () => {
   );
 };
 
-export default SingInBlock;
+export default SignInBlock;

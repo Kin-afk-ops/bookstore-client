@@ -1,3 +1,17 @@
+import Footer from "@/components/footer/Footer";
+import Categories from "@/components/home/Categories";
+import HotProducts from "@/components/home/HotProducts";
+import NewProducts from "@/components/home/NewProducts";
+import Slider from "@/components/slider/Slider";
+
 export default function Home() {
-  return <div>Homepage</div>;
+  return (
+    <div className="">
+      <Slider />
+      <Categories />
+      <NewProducts />
+      <HotProducts />
+      <Footer />
+    </div>
+  );
 }
