@@ -1,25 +1,6 @@
+import ListCart from "@/components/list/ListCart";
+import ListPagination from "@/components/list/ListPagination";
 import React from "react";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "../ui/card";
-import Image from "next/image";
-import { Badge } from "../ui/badge";
-import HomeCartItem from "./HomeCartItem";
-import { Praise } from "next/font/google";
-import TransparentButton from "../customs/TransparentButton";
-import Link from "next/link";
-
-interface Product {
-  id: number;
-  name: string;
-  price: string;
-  image: string;
-}
-
 const products: Product[] = [
   {
     id: 1,
@@ -93,21 +74,13 @@ const products: Product[] = [
   },
 ];
 
-const NewProducts = () => {
+const ListPage = () => {
   return (
-    <div className="p-[15px] main-container">
-      <div className="flex text-[var(--text)] font-bold text-[20px] items-center pb-[15px] border-b border-[#ddd]">
-        <p>New Books</p>
-      </div>
-      <HomeCartItem products={products} />
-
-      <div className="flex justify-center mt-6">
-        <Link href={"/categories/new-book.html"} className="w-[20%]">
-          <TransparentButton content="View more" />
-        </Link>
-      </div>
+    <div className="list-container">
+      <ListCart products={products} />
+      <ListPagination />
     </div>
   );
 };
 
-export default NewProducts;
+export default ListPage;

@@ -1,4 +1,3 @@
-import Footer from "@/components/footer/Footer";
 import Categories from "@/components/home/Categories";
 import HotProducts from "@/components/home/HotProducts";
 import NewProducts from "@/components/home/NewProducts";
@@ -11,7 +10,6 @@ export default function Home() {
       <Categories />
       <NewProducts />
       <HotProducts />
-      <Footer />
     </div>
   );
 }

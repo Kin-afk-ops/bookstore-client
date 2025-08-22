@@ -1,3 +1,5 @@
+import { Button } from "../ui/button";
+
 interface ChildProps {
   content: string;
   handleTodo?: () => void;
@@ -14,15 +16,15 @@ const TransparentButton: React.FC<ChildProps> = ({
   type = "button",
 }) => {
   return (
-    <button
+    <Button
       type={type}
       onClick={!asChild && handleTodo ? () => handleTodo() : undefined}
       className="flex items-center justify-center w-full gap-2 px-4 py-2 border border-[var(--primary)] rounded-lg bg-white text-[var(--primary)]
-           hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer"
+           hover:text-white transition duration-300 ease-in-out cursor-pointer"
     >
       {icon && <span>{icon}</span>}
       <span>{content}</span>
-    </button>
+    </Button>
   );
 };
 
