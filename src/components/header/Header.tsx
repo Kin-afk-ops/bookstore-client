@@ -35,8 +35,10 @@ import {
 } from "../ui/dialog";
 import AuthBlock from "../auth/AuthBlock";
 import { Badge } from "../ui/badge";
+import { useRouter } from "next/navigation";
 
 const Header = () => {
+  const router = useRouter();
   const [language, setLanguage] = useState<{
     label: string;
     value: string;
@@ -434,7 +436,10 @@ const Header = () => {
           <div className="text-[12px] flex flex-col cursor-pointer items-center leading-relaxed text-[var(--text)]">
             <HoverCard openDelay={100} closeDelay={100}>
               <HoverCardTrigger>
-                <div className="text-[12px]  cursor-pointer leading-relaxed text-[var(--text)] relative">
+                <button
+                  className="text-[12px]  cursor-pointer leading-relaxed text-[var(--text)] relative"
+                  onClick={() => router.push("/cart/abc")}
+                >
                   <div className="flex flex-col  items-center">
                     <ShoppingCart color="#646464" className="mb-1 " />
                     My Cart
@@ -445,7 +450,7 @@ const Header = () => {
                   >
                     99
                   </Badge>
-                </div>
+                </button>
               </HoverCardTrigger>
               <HoverCardContent align="end" className="w-[360px]">
                 <div className="flex text-[16px] justify-between">
@@ -491,7 +496,10 @@ const Header = () => {
                 </div>
 
                 <div className="">
-                  <PrimaryButton content="Xem giỏ hàng" />
+                  <PrimaryButton
+                    content="Xem giỏ hàng"
+                    handleTodo={() => router.push(`/cart/abc`)}
+                  />
                 </div>
               </HoverCardContent>
             </HoverCard>
