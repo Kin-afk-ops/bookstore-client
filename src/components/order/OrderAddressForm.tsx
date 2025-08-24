@@ -59,7 +59,7 @@ const OrderAddressForm = () => {
 
   return (
     <div className="flex w-full justify-center my-4">
-      <div className="w-[40%] bg-white p-4">
+      <div className="w-full bg-white p-4">
         <div className="py-4 text-[16px] font-bold uppercase w-full border-b border-[#ccc]">
           Shipping Address
         </div>
@@ -127,6 +127,10 @@ const OrderAddressForm = () => {
                       </SelectTrigger>
                       <SelectContent>
                         <SelectItem value="VN">Vietnam</SelectItem>
+                      </SelectContent>
+
+                      <SelectContent>
+                        <SelectItem value="orther">Orther</SelectItem>
                       </SelectContent>
                     </Select>
                   </FormControl>

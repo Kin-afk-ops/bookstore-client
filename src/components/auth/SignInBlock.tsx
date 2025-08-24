@@ -19,8 +19,13 @@ import { useRouter } from "next/navigation";
 // import { useAuthStore } from "../../../store/authStore";
 import { useEffect, useState } from "react";
 import PrimaryButton from "../customs/PrimaryButton";
+import Link from "next/link";
 
-const SignInBlock = () => {
+interface ChildProps {
+  onClose: () => void;
+}
+
+const SignInBlock: React.FC<ChildProps> = ({ onClose }) => {
   const router = useRouter();
 
   //   const user = useAuthStore((state) => state.user);
@@ -33,7 +38,10 @@ const SignInBlock = () => {
       .string()
       .nonempty({ message: "Email không được để trống." })
       .email({ message: "Email không hợp lệ." }),
-    password: z.string().nonempty({ message: "Mật khẩu không được để trống." }),
+    password: z
+      .string()
+      .nonempty({ message: "Mật khẩu không được để trống." })
+      .min(6, { message: "Mật khẩu phải có ít nhất 6 ký tự." }),
   });
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -71,7 +79,7 @@ const SignInBlock = () => {
   };
 
   return (
-    <div className="flex w-full justify-center mt-2">
+    <div className="flex flex-col w-full justify-center mt-2">
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
@@ -114,9 +122,19 @@ const SignInBlock = () => {
               </FormItem>
             )}
           />
+
           <PrimaryButton content="Sign in" type="submit" />
         </form>
       </Form>
+      <Link
+        href="/recoveryPassword"
+        className="mt-2"
+        onClick={() => onClose?.()}
+      >
+        <span className="text-[14px] hover:text-[var(--primary)] cursor-pointer">
+          Forgot Your Password?
+        </span>
+      </Link>
     </div>
   );
 };

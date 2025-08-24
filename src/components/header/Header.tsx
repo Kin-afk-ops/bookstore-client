@@ -90,7 +90,7 @@ const Header = () => {
         </div>
 
         <div className="flex justify-between w-[340px]">
-          <HoverCard openDelay={100} closeDelay={100}>
+          {/* <HoverCard openDelay={100} closeDelay={100}>
             <HoverCardTrigger>
               <div className="text-[12px]  cursor-pointer leading-relaxed text-[var(--text)] relative">
                 <div className="flex flex-col  items-center">
@@ -126,14 +126,12 @@ const Header = () => {
                     <NotebookPen />
                   </div>
                   <div className="text-[14px] text-[var(--text)] w-[280px] min-w-0">
-                    {/* 👇 Tiêu đề cắt 1 dòng */}
                     <p className="font-bold truncate">
                       Nâng trình ngoại ngữ cùng Lorem, ipsum dolor sit amet
                       consectetur adipisicing elit. Vero, doloremque tempore qui
                       quam eius enim sint id aliquam, vitae saepe quasi maiores!
                     </p>
 
-                    {/* 👇 Nội dung cắt 2 dòng */}
                     <p className="line-clamp-2 text-justify w-full">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Accusamus perferendis a assumenda autem facere veritatis
@@ -152,14 +150,12 @@ const Header = () => {
                     <NotebookPen />
                   </div>
                   <div className="text-[14px] text-[var(--text)] w-[280px] min-w-0">
-                    {/* 👇 Tiêu đề cắt 1 dòng */}
                     <p className="font-bold truncate">
                       Nâng trình ngoại ngữ cùng Lorem, ipsum dolor sit amet
                       consectetur adipisicing elit. Vero, doloremque tempore qui
                       quam eius enim sint id aliquam, vitae saepe quasi maiores!
                     </p>
 
-                    {/* 👇 Nội dung cắt 2 dòng */}
                     <p className="line-clamp-2 text-justify w-full">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Accusamus perferendis a assumenda autem facere veritatis
@@ -178,14 +174,12 @@ const Header = () => {
                     <NotebookPen />
                   </div>
                   <div className="text-[14px] text-[var(--text)] w-[280px] min-w-0">
-                    {/* 👇 Tiêu đề cắt 1 dòng */}
                     <p className="font-bold truncate">
                       Nâng trình ngoại ngữ cùng Lorem, ipsum dolor sit amet
                       consectetur adipisicing elit. Vero, doloremque tempore qui
                       quam eius enim sint id aliquam, vitae saepe quasi maiores!
                     </p>
 
-                    {/* 👇 Nội dung cắt 2 dòng */}
                     <p className="line-clamp-2 text-justify w-full">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Accusamus perferendis a assumenda autem facere veritatis
@@ -204,14 +198,12 @@ const Header = () => {
                     <NotebookPen />
                   </div>
                   <div className="text-[14px] text-[var(--text)] w-[280px] min-w-0">
-                    {/* 👇 Tiêu đề cắt 1 dòng */}
                     <p className="font-bold truncate">
                       Nâng trình ngoại ngữ cùng Lorem, ipsum dolor sit amet
                       consectetur adipisicing elit. Vero, doloremque tempore qui
                       quam eius enim sint id aliquam, vitae saepe quasi maiores!
                     </p>
 
-                    {/* 👇 Nội dung cắt 2 dòng */}
                     <p className="line-clamp-2 text-justify w-full">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Accusamus perferendis a assumenda autem facere veritatis
@@ -230,14 +222,12 @@ const Header = () => {
                     <NotebookPen />
                   </div>
                   <div className="text-[14px] text-[var(--text)] w-[280px] min-w-0">
-                    {/* 👇 Tiêu đề cắt 1 dòng */}
                     <p className="font-bold truncate">
                       Nâng trình ngoại ngữ cùng Lorem, ipsum dolor sit amet
                       consectetur adipisicing elit. Vero, doloremque tempore qui
                       quam eius enim sint id aliquam, vitae saepe quasi maiores!
                     </p>
 
-                    {/* 👇 Nội dung cắt 2 dòng */}
                     <p className="line-clamp-2 text-justify w-full">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Accusamus perferendis a assumenda autem facere veritatis
@@ -256,14 +246,12 @@ const Header = () => {
                     <NotebookPen />
                   </div>
                   <div className="text-[14px] text-[var(--text)] w-[280px] min-w-0">
-                    {/* 👇 Tiêu đề cắt 1 dòng */}
                     <p className="font-bold truncate">
                       Nâng trình ngoại ngữ cùng Lorem, ipsum dolor sit amet
                       consectetur adipisicing elit. Vero, doloremque tempore qui
                       quam eius enim sint id aliquam, vitae saepe quasi maiores!
                     </p>
 
-                    {/* 👇 Nội dung cắt 2 dòng */}
                     <p className="line-clamp-2 text-justify w-full">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Accusamus perferendis a assumenda autem facere veritatis
@@ -282,14 +270,12 @@ const Header = () => {
                     <NotebookPen />
                   </div>
                   <div className="text-[14px] text-[var(--text)] w-[280px] min-w-0">
-                    {/* 👇 Tiêu đề cắt 1 dòng */}
                     <p className="font-bold truncate">
                       Nâng trình ngoại ngữ cùng Lorem, ipsum dolor sit amet
                       consectetur adipisicing elit. Vero, doloremque tempore qui
                       quam eius enim sint id aliquam, vitae saepe quasi maiores!
                     </p>
 
-                    {/* 👇 Nội dung cắt 2 dòng */}
                     <p className="line-clamp-2 text-justify w-full">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Accusamus perferendis a assumenda autem facere veritatis
@@ -308,14 +294,12 @@ const Header = () => {
                     <NotebookPen />
                   </div>
                   <div className="text-[14px] text-[var(--text)] w-[280px] min-w-0">
-                    {/* 👇 Tiêu đề cắt 1 dòng */}
                     <p className="font-bold truncate">
                       Nâng trình ngoại ngữ cùng Lorem, ipsum dolor sit amet
                       consectetur adipisicing elit. Vero, doloremque tempore qui
                       quam eius enim sint id aliquam, vitae saepe quasi maiores!
                     </p>
 
-                    {/* 👇 Nội dung cắt 2 dòng */}
                     <p className="line-clamp-2 text-justify w-full">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Accusamus perferendis a assumenda autem facere veritatis
@@ -334,14 +318,12 @@ const Header = () => {
                     <NotebookPen />
                   </div>
                   <div className="text-[14px] text-[var(--text)] w-[280px] min-w-0">
-                    {/* 👇 Tiêu đề cắt 1 dòng */}
                     <p className="font-bold truncate">
                       Nâng trình ngoại ngữ cùng Lorem, ipsum dolor sit amet
                       consectetur adipisicing elit. Vero, doloremque tempore qui
                       quam eius enim sint id aliquam, vitae saepe quasi maiores!
                     </p>
 
-                    {/* 👇 Nội dung cắt 2 dòng */}
                     <p className="line-clamp-2 text-justify w-full">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Accusamus perferendis a assumenda autem facere veritatis
@@ -360,14 +342,12 @@ const Header = () => {
                     <NotebookPen />
                   </div>
                   <div className="text-[14px] text-[var(--text)] w-[280px] min-w-0">
-                    {/* 👇 Tiêu đề cắt 1 dòng */}
                     <p className="font-bold truncate">
                       Nâng trình ngoại ngữ cùng Lorem, ipsum dolor sit amet
                       consectetur adipisicing elit. Vero, doloremque tempore qui
                       quam eius enim sint id aliquam, vitae saepe quasi maiores!
                     </p>
 
-                    {/* 👇 Nội dung cắt 2 dòng */}
                     <p className="line-clamp-2 text-justify w-full">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Accusamus perferendis a assumenda autem facere veritatis
@@ -386,14 +366,12 @@ const Header = () => {
                     <NotebookPen />
                   </div>
                   <div className="text-[14px] text-[var(--text)] w-[280px] min-w-0">
-                    {/* 👇 Tiêu đề cắt 1 dòng */}
                     <p className="font-bold truncate">
                       Nâng trình ngoại ngữ cùng Lorem, ipsum dolor sit amet
                       consectetur adipisicing elit. Vero, doloremque tempore qui
                       quam eius enim sint id aliquam, vitae saepe quasi maiores!
                     </p>
 
-                    {/* 👇 Nội dung cắt 2 dòng */}
                     <p className="line-clamp-2 text-justify w-full">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Accusamus perferendis a assumenda autem facere veritatis
@@ -412,14 +390,12 @@ const Header = () => {
                     <NotebookPen />
                   </div>
                   <div className="text-[14px] text-[var(--text)] w-[280px] min-w-0">
-                    {/* 👇 Tiêu đề cắt 1 dòng */}
                     <p className="font-bold truncate">
                       Nâng trình ngoại ngữ cùng Lorem, ipsum dolor sit amet
                       consectetur adipisicing elit. Vero, doloremque tempore qui
                       quam eius enim sint id aliquam, vitae saepe quasi maiores!
                     </p>
 
-                    {/* 👇 Nội dung cắt 2 dòng */}
                     <p className="line-clamp-2 text-justify w-full">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Accusamus perferendis a assumenda autem facere veritatis
@@ -431,7 +407,7 @@ const Header = () => {
                 </Link>
               </div>
             </HoverCardContent>
-          </HoverCard>
+          </HoverCard> */}
 
           <div className="text-[12px] flex flex-col cursor-pointer items-center leading-relaxed text-[var(--text)]">
             <HoverCard openDelay={100} closeDelay={100}>
@@ -478,7 +454,6 @@ const Header = () => {
                       />
                     </div>
                     <div className="text-[14px] text-[var(--text)] w-[280px] min-w-0 ml-1">
-                      {/* 👇 Tiêu đề cắt 1 dòng */}
                       <p className=" truncate">
                         Nâng trình ngoại ngữ cùng Lorem, ipsum dolor sit amet
                         consectetur adipisicing elit. Vero, doloremque tempore
@@ -486,7 +461,6 @@ const Header = () => {
                         maiores!
                       </p>
 
-                      {/* 👇 Nội dung cắt 2 dòng */}
                       <div className=" text-justify w-full flex">
                         <p className="mr-2 font-bold">11200</p>
                         <p>x1</p>
@@ -524,7 +498,10 @@ const Header = () => {
                     </Button>
                   </DialogTrigger>
 
-                  <AuthBlock mode={true} />
+                  <AuthBlock
+                    mode={true}
+                    setDialogOpenSignIn={setDialogOpenSignIn}
+                  />
                 </Dialog>
 
                 <Dialog

@@ -13,9 +13,10 @@ import SignUpBlock from "./SignUpBlock";
 
 interface ChildProps {
   mode: boolean;
+  setDialogOpenSignIn: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const AuthBlock: React.FC<ChildProps> = ({ mode }) => {
+const AuthBlock: React.FC<ChildProps> = ({ mode, setDialogOpenSignIn }) => {
   const [signInMode, setSignInMode] = useState<boolean>(mode);
 
   return (
@@ -53,9 +54,8 @@ const AuthBlock: React.FC<ChildProps> = ({ mode }) => {
                 <span className="absolute bottom-0 right-0 h-[2px] w-0 bg-[#e11d48] transition-all duration-500 group-hover:w-full" />
               </Button>
             </DialogTitle>
-            {/* <DialogDescription>sign in</DialogDescription> */}
           </DialogHeader>
-          <SignInBlock />
+          <SignInBlock onClose={() => setDialogOpenSignIn(false)} />
         </>
       ) : (
         <>

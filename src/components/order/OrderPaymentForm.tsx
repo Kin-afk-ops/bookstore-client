@@ -32,7 +32,7 @@ const OrderPaymentForm = () => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      paymentMethod: "",
+      paymentMethod: "cod",
     },
   });
 
@@ -43,7 +43,7 @@ const OrderPaymentForm = () => {
   };
   return (
     <div className="flex w-full justify-center my-4">
-      <div className="w-[40%] bg-white p-4">
+      <div className="w-full bg-white p-4">
         <div className="py-4 text-[16px] font-bold uppercase w-full border-b border-[#ccc]">
           Payment Method
         </div>
@@ -108,6 +108,12 @@ const OrderPaymentForm = () => {
                           />
                         </FormControl>
                         <FormLabel className="font-normal">
+                          <Image
+                            src="https://cdn1.fahasa.com/skin/frontend/base/default/images/payment_icon/ico_cashondelivery.svg?q=11294"
+                            width={40}
+                            height={24}
+                            alt="vn pay"
+                          />
                           Cash on Delivery
                         </FormLabel>
                       </FormItem>
